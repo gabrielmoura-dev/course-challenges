@@ -1,5 +1,14 @@
-document.querySelector(".bateria").addEventListener("click", testClick);
+var numeroDeBaterias = document.querySelectorAll(".bateria").length;
 
-function testClick() {
-  alert("Me clicaram");
+for (var i = 0; i < numeroDeBaterias; i++) {
+  document.querySelectorAll(".bateria")[i].addEventListener("click", function(){
+    alert("Me clicaram");
+  });
 }
+
+
+// document.querySelector(".set").addEventListener("click", testClick);
+
+// function testClick() {
+//   alert("Me clicaram");
+// }
