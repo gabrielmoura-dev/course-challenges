@@ -2,13 +2,17 @@ var numeroDeBaterias = document.querySelectorAll(".bateria").length;
 
 for (var i = 0; i < numeroDeBaterias; i++) {
   document.querySelectorAll(".bateria")[i].addEventListener("click", function(){
-    alert("Me clicaram");
+    
+    this.style.color = "white";
+
+
+
+
   });
 }
 
 
-// document.querySelector(".set").addEventListener("click", testClick);
 
-// function testClick() {
-//   alert("Me clicaram");
-// }
+
+// var audio = new Audio('sounds/tom-1.mp3');
+//     audio.play();
