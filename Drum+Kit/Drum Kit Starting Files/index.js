@@ -8,6 +8,8 @@ for (var i = 0; i < numeroDeBaterias; i++) {
     var letraBateria = this.innerHTML;
 
     executarSom(letraBateria);
+
+    animarBotao(letraBateria);
   });
 }
 
@@ -16,6 +18,8 @@ for (var i = 0; i < numeroDeBaterias; i++) {
 document.addEventListener("keydown", function(event) {
 
     executarSom(event.key);
+
+    animarBotao(event.key);
 
 });
 
@@ -59,3 +63,11 @@ function executarSom(tecla) {
 
       default: console.log(letraBateria);
     }};
+
+    function animarBotao(teclaPressionada) {
+      var ativarBotao = document.querySelector("." + teclaPressionada);
+      ativarBotao.classList.add("pressed");
+        setTimeout(function(){
+          ativarBotao.classList.remove("pressed");
+        }, 99);
+    }
