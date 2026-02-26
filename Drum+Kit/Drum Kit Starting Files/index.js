@@ -63,11 +63,25 @@ function executarSom(tecla) {
 
       default: console.log(letraBateria);
     }};
-
+  
     function animarBotao(teclaPressionada) {
       var ativarBotao = document.querySelector("." + teclaPressionada);
+
+      if (!ativarBotao) {
+        return;
+      }
+
       ativarBotao.classList.add("pressed");
-        setTimeout(function(){
-          ativarBotao.classList.remove("pressed");
-        }, 99);
+
+      var spark = document.createElement("span");
+      spark.classList.add("spark");
+      ativarBotao.appendChild(spark);
+
+      spark.addEventListener("animationend", function() {
+        spark.remove();
+      });
+
+      setTimeout(function() {
+        ativarBotao.classList.remove("pressed");
+      }, 130);
     }

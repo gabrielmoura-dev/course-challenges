@@ -1,6 +1,7 @@
 body {
   text-align: center;
-  background-color: #283149;
+  background: linear-gradient(135deg, #283149 0%, #404b69 40%, #5c2d5a 70%, #da0463 100%);
+  min-height: 100vh;
 }
 
 h1 {
@@ -72,4 +73,41 @@ h1 {
   text-align: center;
   margin: 10px;
   background-color: white;
+  position: relative;
+  overflow: visible;
+  transition: transform 0.12s ease-out, box-shadow 0.12s ease-out,
+    background-color 0.12s ease-out, border-color 0.12s ease-out;
+}
+
+.pressed {
+  transform: scale(0.94);
+  border-color: #da0463;
+  box-shadow: 0 0 25px 0 rgba(218, 4, 99, 0.8),
+    0 0 45px 5px rgba(64, 75, 105, 0.7);
+  background-color: #fbe7f1;
+}
+
+.spark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  border: 3px solid rgba(219, 237, 243, 0.9);
+  box-shadow: 0 0 25px rgba(218, 4, 99, 0.8),
+    0 0 45px rgba(64, 75, 105, 0.8);
+  pointer-events: none;
+  animation: spark-burst 0.25s ease-out forwards;
+}
+
+@keyframes spark-burst {
+  0% {
+    transform: translate(-50%, -50%) scale(0.85);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.5);
+    opacity: 0;
+  }
 }
