@@ -12,15 +12,6 @@ As soluções aqui presentes abrangem as seguintes tecnologias e conceitos:
 * **Back-end:** Lógica de Programação
 * **Versionamento:** Git e GitHub.
 
-## 📂 Estrutura do Repositório
-
-O repositório está organizado por módulos ou tecnologias para facilitar a navegação:
-
-* `/learning-JavaScript`: Exercícios de lógica, loops, condicionais e funções.
-* `/course-challenges`: Desafios de lógica e algoritmo em sites como LeetCode e Coddy.tech.
-* `/sql-queries`: Scripts de criação e manipulação de bancos de dados (NÃO INICIALIZADO).
-* `/fiap-challenges`: Atividades desenvolvidas durante a graduação na FIAP (NÃO INICIALIZADO).
-
 ## 🚀 Como visualizar os exercícios
 Cada pasta contém um arquivo de código fonte (ex: `.js`, `.html`, `.sql`). No caso de projetos web, você pode clonar este repositório e abrir os arquivos `index.html` em seu navegador:
 
